@@ -23,3 +23,6 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.2/minik
 
 --vm-driver=none
 
+
+kubectl apply -f client-pod.yaml
+kubectl apply -f client-node-port.yaml
