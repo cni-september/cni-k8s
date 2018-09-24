@@ -23,7 +23,7 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.2/minik
 
 #start minikube locally 
 
---vm-driver=none
+minikube start --vm-driver=none
 
 
 kubectl apply -f client-pod.yaml
