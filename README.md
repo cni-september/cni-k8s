@@ -29,3 +29,11 @@ minikube start --vm-driver=none
 kubectl apply -f client-pod.yaml
 
 kubectl apply -f client-node-port.yaml
+
+kubectl get pods
+
+kubectl get services
+
+minikube ip
+
+curl -w '\n' localhost:31515
