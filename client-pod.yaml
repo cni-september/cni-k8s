@@ -1,17 +1,13 @@
-# api version - scopes limits the types of objects that we can specify
+#configuration for creating the container
 apiVersion: v1
-# kind = object type: StatefulSet, ReplicaController, Pod, Service
-# service = setup networking
-# pod = object to run a container
-
-kind: Service  
+kind: Pod
 metadata:
-  name: client-node-port
-spec:
-  type: NodePort
-  ports:
-    - port: 3050
-      targetPort: 3000
-      nodePort: 31515
-  selector:
+  name: client-pod
+  labels: 
     component: web
+spec:
+  containers:
+    - name: client
+      image: cniseptember/cni-docker
+      ports: 
+        - containerPort: 8080
