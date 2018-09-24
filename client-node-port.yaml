@@ -1,0 +1,17 @@
+# api version - scopes limits the types of objects that we can specify
+apiVersion: v1
+#kind = object type: StatefulSet, ReplicaController, Pod, Service
+# service = setup networking
+# pod = object to run a container
+
+kind: Service  
+metadata:
+  name: client-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 3050
+      targetPort: 8080
+      nodePort: 31515
+  selector:
+    component: web
