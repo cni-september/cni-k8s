@@ -1,12 +1,6 @@
 # cni-k8s
 DEMO DEMO DEMO
 
-1) Clone repository
-
-git clone https://github.com/cni-september/cni-k8s.git
-
-cd cni-k8s
-
 1)Install kubectl
 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
@@ -27,8 +21,14 @@ Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a
 
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.2/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
+3)Clone repository
 
-3)Start minikube locally 
+git clone https://github.com/cni-september/cni-k8s.git
+
+cd cni-k8s
+
+
+4)Start minikube locally 
 
 minikube start --vm-driver=none
 
@@ -47,7 +47,7 @@ curl -w '\n' localhost:31515
 -> hellow world should appear
 
 
-4)Test kubernetes functionality:
+5)Test kubernetes functionality:
 
 docker container ls | grep september  -> get container id
 docker container kill 'container_id'
