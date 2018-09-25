@@ -1,6 +1,11 @@
 # cni-k8s
 DEMO DEMO DEMO
 
+1) Clone repository
+
+git clone https://github.com/cni-september/cni-k8s.git
+
+cd cni-k8s
 
 1)Install kubectl
 
