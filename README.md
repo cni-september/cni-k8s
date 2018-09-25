@@ -50,6 +50,7 @@ curl -w '\n' localhost:31515
 5)Test kubernetes functionality:
 
 docker container ls | grep september  -> get container id
+
 docker container kill 'container_id'
 
 kubectl get pods -> you should see the status and how the container restarts automatically
